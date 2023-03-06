@@ -17,7 +17,4 @@ Route::get('index', function () {
 
 Route::get('login',[StudentController::class,'index']);
 Route::post('login',[StudentController::class,'store']);
-Route::get('delete/{id}',[StudentController::class,'delete']);
-Route::get('edit/{id}',[StudentController::class,'edit']);
-
-
+Route::get('login',[StudentController::class,'dboperations']);
