@@ -44,22 +44,9 @@ class StudentController extends Controller
         
     }
 
-    public function delete($id){
-        
-        
-        $delete = DB::table('crudtable')->where('id',$id)->delete();
-      
-
-       
-       
-       
-    }
-
-    public function edit($id){
-        
-
-        DB::table('crudtable')->find($id);
-        return view('edit');
+   public function dboperations(){
+        return DB::table('crudtable')->where('id',1)->update(['email'=>'arun2100@gmail.com']);
+        // return DB::table('crudtable')->where('id',1)->delete();
     }
 
     
